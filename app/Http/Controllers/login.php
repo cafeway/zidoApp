@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class login extends Controller
 {
@@ -13,6 +14,12 @@ class login extends Controller
     }
     public function post(Request $req)
     {
-        dd($req);
+        if (Auth::attempt(['email' => $req->email, 'password' => $req->password]))
+        {
+            return redirect($to = '/');
+        } else {
+            return redirect($to = '/login')->with('status','Wrong login credentials');
+        }
+
     }
 }

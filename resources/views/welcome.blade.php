@@ -37,9 +37,9 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15">Downlines</h5>
-                          <h2 class="mb-3 font-18">258</h2>
-                          <h5 class="font-15" style="color:blue;">Bonus</h5>
-                          <h2 class="mb-3 font-18" style="color:green">258</h2>
+                          <h2 class="mb-3 font-18">{{ Auth::user()->downlines }}</h2>
+                          <h6 class="font-13" style="color:blue;">Bonus</h6>
+                          <h2 class="mb-3 font-18" style="color:green">${{ Auth::user()->bonus }}</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -60,8 +60,9 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15">Balance</h5>
-                          <h2 class="mb-3 font-18">1,287</h2>
-                          <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
+                          <h2 class="mb-3 font-18"style="color:orange;">${{ Auth::user()->balance }}</h2>
+                          <h6 class="font-13">Cashout</h6>
+                          <h2 class="mb-3 font-18"style="color:purple ;">${{ Auth::user()->withdrawals}}</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -81,10 +82,10 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Cashouts</h5>
-                          <h2 class="mb-3 font-18">128</h2>
-                          <p class="mb-0"><span class="col-green">18%</span>
-                            Increase</p>
+                          <h5 class="font-15">Total Bids</h5>
+                          <h2 class="mb-3 font-18"style="color:blue;">128</h2>
+                          <h5 class="font-15">Total Bids</h5>
+                          <h2 class="mb-3 font-18"style="color:orange;">128</h2>
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
@@ -105,7 +106,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15">Revenue</h5>
-                          <h2 class="mb-3 font-18">$48,697</h2>
+                          <h2 class="mb-3 font-18">${{ Auth::user()-> revenue}}</h2>
 
 
                         </div>
@@ -126,7 +127,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Revenue Breakdown Table</h4>
+                  <h4>Ledger</h4>
                   <div class="card-header-form">
                     <form>
                       <div class="input-group">
@@ -144,9 +145,11 @@
                       <tr>
                         <th>Source</th>
                         <th>Amount Settled </th>
+                        <th>Destination</th>
                         <th>Settlement Date</th>
                       </tr>
                       <tr>
+                        <td>Create a mobile app</td>
                         <td>Create a mobile app</td>
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">

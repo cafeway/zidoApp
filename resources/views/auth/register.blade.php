@@ -16,6 +16,7 @@
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -37,18 +38,31 @@
                     <div class="form-group col-6">
                       <label for="frist_name">UserName</label>
                       <input id="frist_name" type="text" class="form-control" name="username" autofocus required>
+                      @error('username')
+
+                          <p><small class="text-danger">{{ $message }}</small></p>
+
+                      @enderror
                     </div>
                     <div class="form-group col-6">
                       <label for="last_name">PhoneNumber</label>
                       <input id="last_name" type="text" class="form-control" name="phonenumber" required>
+                      @error('phonenumber')
+                      <div class="invalid-feedback">
+                        <p><small class="text-danger">{{ $message }}</small></p>
+                    </div>
+                      @enderror
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-6">
                         <label for="email">Email</label>
                         <input id="email" type="email" class="form-control" name="email" required>
+                        @error('email')
                         <div class="invalid-feedback">
-                        </div>
+                            <p><small class="text-danger">{{ $message }}</small></p>
+                      </div>
+                        @enderror
                       </div>
                       <div class="form-group col-6">
                         <label for="email">Nationality</label>
@@ -109,6 +123,9 @@
                       <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
+                        @error('password')
+                            <p><small class="text-danger">{{ $message }}</small></p>
+                        @enderror
                       </div>
                     </div>
                     <div class="form-group col-6">

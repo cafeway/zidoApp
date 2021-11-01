@@ -32,6 +32,8 @@ class User extends Authenticatable
         'social_links_clicked',
         'email',
         'password',
+        'bids',
+        'revenue',
     ];
 
     /**

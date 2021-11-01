@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('bonus');
             $table->integer('withdrawals');
             $table->integer('bids');
+            $table->integer('revenue');
             $table->integer('ads_viewed');
             $table->integer('social_links_clicked');
             $table->string('email')->unique();
