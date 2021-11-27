@@ -35,9 +35,9 @@
             <li>
               <form class="form-inline mr-auto">
                 <div class="search-element">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <input class="form-control" type="search" placeholder="Invite Your Friends" aria-label="Invite A Friend" data-width="200" value="{{env('APP_URL')}}/register?invite={{ Auth::user()->username }}">
                   <button class="btn" type="submit">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-link"></i>
                   </button>
                 </div>
               </form>
@@ -156,7 +156,7 @@
               </div>
             </div>
           </li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown"
+          {{-- <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
@@ -173,7 +173,7 @@
                 Logout
               </a>
             </div>
-          </li>
+          </li> --}}
         </ul>
       </nav>
 
@@ -196,10 +196,10 @@
                   data-feather="briefcase"></i><span>Profile</span></a>
             </li>
             <li class="dropdown">
-              <a href="{{ route('refferal') }}"><i data-feather="user-plus"></i><span>Downlines</span></a>
+              <a href="{{ route('refferal') }}"><i data-feather="user-plus"></i><span>Your Friends</span></a>
             </li>
             <li class="dropdown">
-              <a href="{{ route('timeline') }}"><i data-feather="sliders"></i><span>Timelime</span></a>
+              <a href="#"><i data-feather="share" data-toggle="modal" data-target="#exampleModal"></i><span>Invite a friend</span></a>
             <li class="menu-header">Earnings</li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="facebook"></i><span>Social Earnings</span></a>
@@ -211,14 +211,14 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
+              {{-- <a href="#" class="menu-toggle nav-link has-dropdown"><i
                   data-feather="users"></i><span>P2P bidding</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="avatar.html">Bid</a></li>
                 <li><a class="nav-link" href="{{ route('paring') }}">Find A Pair</a></li>
                 <li><a class="nav-link" href="card.html">Bid history</a></li>
               </ul>
-            </li>
+            </li> --}}
             {{-- <li><a class="nav-link" href="blank.html"><i data-feather="file"></i><span>Blank Page</span></a></li> --}}
             {{-- <li class="menu-header">Otika</li> --}}
             {{-- <li class="dropdown">
@@ -232,18 +232,14 @@
               </ul>
             </li> --}}
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="dollar-sign"></i><span>Investments</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="dollar-sign"></i><span>bidding</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link link-primary" href="{{ route('pricing') }}"><i class="
-                    fas fa-cart-plus"></i> Packages</a></li>
-                <li><a class="nav-link link-primary" style="color: blue;"href="{{ route('pending') }}"><i class="
-
-far fa-clock"></i>Pending Investments</a></li>
+                    fas fa-cart-plus"></i>Bidding Session</a></li>
+                <li><a class="nav-link link-primary" style="color: blue;"href="{{ route('pending') }}"><i class="far fa-clock"></i>Pending bids</a></li>
                 <li><a class="nav-link" style="color: green;" href="{{ route('matured') }}"><i class="
-                    fas fa-check-circle"></i>Matured Investments</a></li>
-                <li><a class="nav-link"  style="color: red;" href="{{ route('flagged') }}"><i class="
-
-                    fas fa-minus-circle"></i>Flagged Investments</a></li>
+                    fas fa-check-circle"></i>Matured bids</a></li>
+                <li><a class="nav-link"  style="color: red;" href="{{ route('flagged') }}"><i class="fas fa-minus-circle"></i>Flagged Bids</a></li>
               </ul>
 
 
@@ -275,17 +271,10 @@ far fa-clock"></i>Pending Investments</a></li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="credit-card"></i><span>Deposit</span></a>
               <ul class="dropdown-menu">
+                <li><a class="nav-link" href="light-gallery.html"><i class="fas fa-mobile"></i>AirtelMoney</a></li>
+                <li><a class="nav-link" href="light-gallery.html"><i class="fab fa-btc"></i>CryptoCurrency</a></li>
                 <li><a class="nav-link" href="light-gallery.html"><i class="
-
-                    fas fa-mobile
-"></i>AirtelMoney</a></li>
-                <li><a class="nav-link" href="light-gallery.html"><i class="
-
-fab fa-btc"></i>CryptoCurrency</a></li>
-                <li><a class="nav-link" href="light-gallery.html"><i class="
-
-                    fas fa-mobile
-"></i>Lipa Na Mpesa</a></li>
+                    fas fa-mobile"></i>Lipa Na Mpesa</a></li>
                 <li><a class="nav-link" href="light-gallery.html"><i class="fas fa-university"></i>Backoffice</a></li>
                 <li><a href="gallery1.html"><i class="
                     fab fa-cc-paypal"></i>Paypal</a></li>
@@ -390,6 +379,11 @@ fab fa-btc"></i>CryptoCurrency</a></li>
   <script src="assets/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="assets/js/custom.js"></script>
+  <script src="{{ URL::asset('js/app.min.js') }}"></scri
+  <script src="{{ URL::asset('js/scripts.js') }}"></script>
+  <script src="{{ URL::asset('js/custom.js') }}"></script>
+  <script src="{{ URL::asset('bundles/prism/prism.js') }}"></script>
+
 </body>
 
 

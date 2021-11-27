@@ -33,12 +33,12 @@
               <div class="col-12 col-md-4 col-lg-4">
                 <div class="pricing">
                   <div class="pricing-title">
-                    Developer
+                    Morning Bidding
                   </div>
                   <div class="pricing-padding">
                     <div class="pricing-price">
-                      <div>$19</div>
-                      <div>per month</div>
+                      <div><small>8:00</small> - <small>10:00</small></div>
+                      <div>AM</div>
                     </div>
                     <div class="pricing-details">
                       <div class="pricing-item">
@@ -71,12 +71,12 @@
               <div class="col-12 col-md-4 col-lg-4">
                 <div class="pricing pricing-highlight">
                   <div class="pricing-title">
-                    Small Team
+                    Midday Bidding
                   </div>
                   <div class="pricing-padding">
                     <div class="pricing-price">
-                      <div>$60</div>
-                      <div>per month</div>
+                        <div><small>1:00</small> - <small>3:00</small></div>
+                        <div>PM</div>
                     </div>
                     <div class="pricing-details">
                       <div class="pricing-item">
@@ -109,12 +109,12 @@
               <div class="col-12 col-md-4 col-lg-4">
                 <div class="pricing">
                   <div class="pricing-title">
-                    Enterprise
+                    Evening Bidding
                   </div>
                   <div class="pricing-padding">
                     <div class="pricing-price">
-                      <div>$499</div>
-                      <div>per month</div>
+                        <div><small>6:00</small> - <small>10:00</small></div>
+                        <div>PM</div>
                     </div>
                     <div class="pricing-details">
                       <div class="pricing-item">

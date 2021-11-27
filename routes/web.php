@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\downlines;
+use App\Http\Controllers\home;
 use App\Http\Controllers\investments;
 use App\Http\Controllers\login;
 use App\Http\Controllers\p2p;
@@ -22,11 +23,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
 
+//Home
 
+Route::get('/',[home::class,'index'])->name('home');
 // LOGIN
 Route::get('/login',[login::class,'index'])->name('login');
 Route::post('/login',[login::class,'post']);
